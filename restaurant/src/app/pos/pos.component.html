@@ -1,0 +1,6 @@
+<h3>Componente POS</h3>
+<form (ngSubmit)="onSubmit()" #pedidoForm="ngForm">
+  <input type="text" [(ngModel)]="cliente" name="cliente" placeholder="Nombre del Cliente" required>
+  <input type="text" [(ngModel)]="descripcion" name="descripcion" placeholder="Descripción del Pedido" required>
+  <button type="submit">Ordenar</button>
+</form>

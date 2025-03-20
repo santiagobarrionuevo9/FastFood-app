@@ -1,0 +1,11 @@
+<h1>Restaurant FastFood</h1>
+<h3>Pedidos Ingresados</h3>
+<pre *ngIf="pedidosPendientes.length > 0">
+  {{ pedidosPendientes | json }}
+</pre>
+
+<app-pos (nuevoPedido)="agregarPedido($event)"></app-pos>
+<hr>
+<app-kitchen [pedidosPendientes]="pedidosPendientes" (pedidoListo)="moverAPedidoListo($event)"></app-kitchen>
+<hr>
+<app-delivery-point [pedidosListos]="pedidosListos" (pedidoEntregado)="entregarPedido($event)"></app-delivery-point>
